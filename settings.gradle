@@ -31,3 +31,5 @@ void includeRecursive(File dir) {
 static boolean isModule(File dir) {
     return new File(dir, 'build.gradle').isFile()
 }
+
+include ':feature-agree-data-ui'
