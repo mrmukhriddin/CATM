@@ -1,0 +1,21 @@
+androidModule("core-utils")
+
+dependencies {
+
+    tasks.withType(Test) {
+    useJUnitPlatform()
+    testLogging {
+        exceptionFormat "full"
+        events "started", "skipped", "passed", "failed"
+        showStandardStreams true
+    }
+}
+
+    implementation Libs.coreKtx
+    implementation Libs.material
+    implementation Libs.jodaTimeAndroid
+
+    testImplementation Libs.junit5Api
+    testImplementation Libs.junit5Params
+    testRuntimeOnly Libs.junit5Engine
+}

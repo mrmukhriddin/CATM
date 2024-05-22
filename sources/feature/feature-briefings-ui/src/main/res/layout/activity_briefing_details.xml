@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_container"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/briefing_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="20dp"
+        android:textAppearance="@style/Text.H2"
+        tools:text="Повторный" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <ViewStub
+                android:id="@+id/briefing_file_stub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:layout="@layout/layout_document"
+                android:paddingVertical="24dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <WebView
+                    android:id="@+id/briefing_content_web_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/briefing_results_text"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/ic_ok"
+                android:drawablePadding="16dp"
+                android:gravity="center"
+                android:paddingHorizontal="24dp"
+                android:textAppearance="@style/Text.H5"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_ok"
+                tools:text="Тест подписан"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/briefing_quiz_btn"
+                style="@style/OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/briefings_details_quiz"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ru.metasharks.catm.core.ui.view.LoadingMaterialButtonWrapper
+                android:id="@+id/briefing_sign_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:progressIndicatorSizeSubtrahend="24dp"
+                tools:visibility="visible">
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/briefings_details_sign" />
+
+            </ru.metasharks.catm.core.ui.view.LoadingMaterialButtonWrapper>
+
+            <TextView
+                android:id="@+id/warning_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingHorizontal="24dp"
+                android:textAppearance="@style/Text.P3"
+                android:visibility="gone"
+                tools:text="Запрос не отправлен на сервер. Отсутствует сеть Интернет."
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

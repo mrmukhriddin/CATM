@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="briefings_title">Инструктажи</string>
+    <string name="briefings_details_quiz">Пройти тест</string>
+    <string name="briefings_details_sign">Подписать</string>
+
+    <string name="briefings_results_signed">Подписано</string>
+    <string name="briefings_results_quiz_done">Тест пройден</string>
+    <string name="briefings_results_all_done">Тест пройден, инструктаж подписан</string>
+
+    <string name="text_choose_right_answer">Выберите правильный вариант ответа</string>
+    <string name="btn_text_send_results">Ответить</string>
+    <string name="btn_text_next_question">Следующий вопрос</string>
+    <string name="briefing_awaiting_internet_connection">Запрос не отправлен на сервер. Отсутствует сеть Интернет.</string>
+</resources>

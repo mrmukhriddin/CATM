@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.metasharks.catm.feature.workpermit.ui">
+
+    <application>
+        <activity
+            android:name=".list.WorkPermitsActivity"
+            android:exported="false"
+            android:label="@string/wp_work_permits_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".details.WorkPermitDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".details.workers.WorkersActivity"
+            android:exported="false"
+            android:label="@string/wp_details_workers_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".details.signers.SignersActivity"
+            android:exported="false"
+            android:label="@string/wp_details_signers_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".details.adddocs.AdditionalDocumentsActivity"
+            android:exported="false"
+            android:label="@string/wp_details_additional_documents_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".details.riskfactors.RiskFactorsActivity"
+            android:exported="false"
+            android:label="@string/wp_details_risk_factors_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".details.gasairanalysis.GasAirAnalyzesActivity"
+            android:exported="false"
+            android:label="@string/wp_details_gas_air_analyzes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".details.gasairanalysis.create.CreateGasAirAnalysisActivity"
+            android:exported="false"
+            android:label="@string/wp_details_create_gas_air_analysis"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".filter.WorkPermitsFilterActivity"
+            android:exported="false"
+            android:label="@string/wp_filter_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".details.extend.ExtendWorkPermitActivity"
+            android:exported="false"
+            android:label="@string/wp_extend_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".details.dailypermits.DailyPermitsActivity"
+            android:exported="false"
+            android:label="@string/wp_daily_permits_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".details.dailypermits.create.CreateDailyPermitActivity"
+            android:exported="false"
+            android:label="@string/wp_create_daily_permit_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".details.dailypermits.end.EndDailyPermitActivity"
+            android:exported="false"
+            android:label="@string/wp_end_daily_permit_label"
+            android:screenOrientation="portrait" />
+    </application>
+</manifest>

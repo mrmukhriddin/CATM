@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/page_main"
+        android:enabled="true"
+        android:icon="@drawable/ic_qr_code"
+        android:title="@string/tab_label_main" />
+    <item
+        android:id="@+id/page_briefings"
+        android:enabled="true"
+        android:icon="@drawable/ic_briefings"
+        android:title="@string/tab_label_briefings" />
+    <item
+        android:id="@+id/page_trainings"
+        android:enabled="true"
+        android:icon="@drawable/ic_trainings"
+        android:title="@string/tab_label_trainings" />
+    <item
+        android:id="@+id/page_documents"
+        android:enabled="true"
+        android:icon="@drawable/ic_documents"
+        android:title="@string/tab_label_documents" />
+    <item
+        android:id="@+id/page_feedback"
+        android:enabled="true"
+        android:icon="@drawable/ic_feedback"
+        android:title="@string/tab_label_feedback" />
+</menu>

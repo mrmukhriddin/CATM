@@ -1,0 +1,29 @@
+androidModule("feature-offline")
+apply plugin: 'kotlinx-serialization'
+apply plugin: 'dagger.hilt.android.plugin'
+
+dependencies {
+    implementation project(":core-navigation")
+    implementation project(":core-network")
+    implementation project(":core-storage")
+    implementation project(":core-utils")
+    implementation project(":core-ui")
+    implementation project(":feature-profile")
+    implementation project(":feature-work-permit")
+    implementation project(":feature-create-work-permit")
+    implementation project(":feature-briefings")
+
+    implementation Libs.kotlinxSerialization
+    implementation Libs.timber
+    implementation Libs.hilt
+    implementation Libs.rxKotlin3
+    implementation Libs.rxJava3
+    implementation Libs.rxAndroid3
+    implementation Libs.retrofit
+    implementation Libs.roomRuntime
+    implementation Libs.roomRxJava
+    implementation Libs.jodaTimeAndroid
+
+    kapt Libs.hiltCompiler
+    kapt Libs.roomCompiler
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_worker_qr">Отсканируйте личный QR-код работника</string>
+    <string name="invalid_qr_code">QR код неверного формата</string>
+    <string name="no_access">Нет прав на просмотр данной информации</string>
+    <string name="activity_scan_qr_label">Сканировать QR</string>
+</resources>

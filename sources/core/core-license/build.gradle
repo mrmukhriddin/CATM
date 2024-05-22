@@ -1,0 +1,12 @@
+androidModule("core-license")
+apply plugin: 'dagger.hilt.android.plugin'
+
+dependencies {
+
+    implementation Libs.hilt
+    implementation Libs.timber
+
+    implementation project(":core-storage")
+
+    kapt Libs.hiltCompiler
+}

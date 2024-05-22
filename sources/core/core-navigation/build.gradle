@@ -1,0 +1,13 @@
+androidModule("core-navigation")
+apply plugin: 'dagger.hilt.android.plugin'
+
+dependencies {
+
+    api Libs.cicerone
+    implementation Libs.timber
+    implementation Libs.hilt
+
+    implementation project(":core-license")
+
+    kapt Libs.hiltCompiler
+}

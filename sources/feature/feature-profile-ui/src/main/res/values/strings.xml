@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="qr_code_img_preview_title">Ваш QR-код</string>
+
+    <string name="about_app">О приложении</string>
+    <string name="tab_label_main">Главное</string>
+    <string name="tab_label_briefings">Инструктаж</string>
+    <string name="tab_label_trainings">Обучение</string>
+    <string name="tab_label_documents">Документы</string>
+    <string name="tab_label_feedback">Связь</string>
+    <string name="log_out_btn">Выйти из аккаунта</string>
+    <string name="workers">Работники</string>
+    <string name="briefings">Инструктажи</string>
+    <string name="tools">Инструмент</string>
+    <string name="card">Личная карточка учета выдачи СИЗ</string>
+    <string name="trainings">Обучение:</string>
+    <string name="med_exam">Медицинский осмотр:</string>
+    <string name="med_exam_pattern">%s до %s</string>
+    <string name="training_pattern">%s\nДействителен до %s</string>
+    <string name="work_permissions_btn_text">Наряд-допуски</string>
+    <string name="qr_code_btn_text">Ваш QR-код</string>
+    <string name="worker_btn_text">Работники</string>
+    <string name="hint_search">Искать…</string>
+    <string name="copied_to_clipboard">Номер телефона скопирован</string>
+    <string name="camera_rationale_text">Чтобы пользоваться сканнером, нужно дать разрешение на использование камеры</string>
+    <string name="camera_settings_text">Вы можете дать разрешение на использование камеры в настройках. Нажмите сюда, чтобы перейти в настройки</string>
+    <string name="scan_qr_btn_text">Сканировать QR</string>
+
+    <string name="status_offline">Offline</string>
+    <string name="status_online">Online</string>
+    <string name="status_offline_has_connection">Есть сеть</string>
+    <string name="status_online_no_connection">Нет сети</string>
+    <string name="document">Документ</string>
+    <string name="date_pattern">От %s %s</string>
+    <string name="snack_generation_start">Файл генерируется, обновите экран</string>
+</resources>

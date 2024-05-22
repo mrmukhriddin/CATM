@@ -1,0 +1,31 @@
+androidModule("feature-auth-ui")
+apply plugin: 'dagger.hilt.android.plugin'
+
+dependencies {
+    implementation Libs.coreKtx
+    implementation Libs.appCompat
+    implementation Libs.material
+    implementation Libs.constraintLayout
+    implementation Libs.viewModelKtx
+    implementation Libs.activityKtx
+    implementation Libs.hilt
+    implementation Libs.timber
+    implementation Libs.retrofit
+    implementation Libs.rxKotlin3
+    implementation Libs.rxAndroid3
+    implementation Libs.cicerone
+    implementation Libs.byViewBinding
+
+    kapt Libs.hiltCompiler
+
+    implementation project(':feature-auth')
+    implementation project(':feature-notifications')
+    implementation project(':feature-profile')
+    implementation project(':feature-offline')
+    implementation project(':core-navigation')
+    implementation project(':core-network')
+    implementation project(':core-storage')
+    implementation project(':core-ui')
+    implementation project(':core-utils')
+    implementation project(':core-license')
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="prefs_file_name" translatable="false">catm.xml</string>
+    <string name="preferences_key_has_unread_notifications" translatable="false">key.has_notifications_read</string>
+</resources>

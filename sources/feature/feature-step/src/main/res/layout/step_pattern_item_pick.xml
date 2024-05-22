@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.metasharks.catm.core.ui.view.LabeledWrapper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/StepLabelledWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:label_textColor="@color/dark_gray"
+    tools:label="Организация">
+
+    <TextView
+        android:id="@+id/picker"
+        style="@style/TextPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="top"
+        android:textAppearance="@style/Text.P2"
+        android:textColor="@color/default_text_color"
+        tools:hint="Введите" />
+
+</ru.metasharks.catm.core.ui.view.LabeledWrapper>

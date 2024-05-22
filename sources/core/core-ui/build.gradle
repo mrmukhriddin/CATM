@@ -1,0 +1,33 @@
+androidModule("core-ui")
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-parcelize'
+
+dependencies {
+
+    implementation Libs.appCompat
+    implementation Libs.coreKtx
+    implementation Libs.activityKtx
+    implementation Libs.material
+    implementation Libs.splashScreen
+    implementation Libs.cicerone
+    implementation Libs.javaxInject
+    implementation Libs.hilt
+    implementation Libs.adapterDelegates
+    implementation Libs.glide
+    implementation Libs.paging
+    implementation Libs.decoro
+    implementation Libs.rxBinding
+    implementation Libs.rxJava3
+    implementation Libs.shimmer
+    implementation Libs.byViewBinding
+    implementation Libs.timber
+    implementation Libs.retrofit
+
+    kapt Libs.glideCompiler
+    kapt Libs.hiltCompiler
+
+    implementation project(":core-utils")
+    implementation project(":core-license")
+    implementation project(":core-navigation")
+    implementation project(":core-storage")
+}

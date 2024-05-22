@@ -1,0 +1,7 @@
+ext.CommonPluginVersions = [
+        androidGradle: "7.1.2"
+]
+
+ext.CommonVersions = [
+        kotlin: "1.6.10"
+]

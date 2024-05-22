@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty_search_result_text">По вашему запросу ничего не найдено</string>
+    <string name="empty_response_text">Тут пока ничего нет</string>
+    <string name="copied_to_clipboard">Номер телефона скопирован</string>
+    <string name="error_during_action_default">Произошла ошибка при выполнении действия</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notifications_incoming_name">Входящие уведомления</string>
+    <string name="notifications_outgoing_name">Уведомление о работе приложения</string>
+
+    <string name="notifications_incoming_description">Уведомления, которые приходят и оповещают об изменениях</string>
+    <string name="notifications_outgoing_description">Уведмоление, которое показывает, что приложение получает уведомления</string>
+
+    <string name="notifications_incoming_id" translatable="false">incoming_notifications</string>
+    <string name="notifications_outgoing_id" translatable="false">outgoing_notifications</string>
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="24dp"
+    android:background="@drawable/background_rounded_corners_clickable"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="16dp">
+
+    <TextView
+        android:id="@+id/probe_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Text.H5"
+        tools:text="14.08.2022" />
+
+    <TextView
+        android:id="@+id/probe_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/Text.P3"
+        tools:text="Отбор проб: 21:00" />
+
+    <TextView
+        android:id="@+id/probe_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/Text.P3"
+        tools:text="Отбор проб: 21:00" />
+
+    <TextView
+        android:id="@+id/probe_components"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/Text.P3"
+        tools:text="Отбор проб: 21:00" />
+
+    <TextView
+        android:id="@+id/probe_permissible_concentration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/Text.P3"
+        tools:text="Отбор проб: 21:00" />
+
+    <TextView
+        android:id="@+id/probe_concentration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/Text.P3"
+        tools:text="Отбор проб: 21:00" />
+
+    <TextView
+        android:id="@+id/probe_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/Text.P3"
+        tools:text="Отбор проб: 21:00" />
+
+    <TextView
+        android:id="@+id/probe_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/Text.P3"
+        tools:text="Отбор проб: 21:00" />
+
+    <TextView
+        android:id="@+id/probe_responsible_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/Text.P3"
+        tools:text="Отбор проб: 21:00" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/probe_delete"
+        style="@style/OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_delete_gas_air_label"
+        app:backgroundTint="@android:color/transparent"
+        tools:text="Отбор проб: 21:00" />
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="warning_date_wrong_format">Дата введена в неверном формате</string>
+    <string name="warning_date_passed">Дата начала уже прошла</string>
+    <string name="warning_date_mismatch">Дата истечения срока раньше даты старта</string>
+    <string name="warning_between_dates_error">Дата должна быть после начала и до окончания работ</string>
+    <string name="step">Шаг %d.</string>
+    <string name="field_hint_date">ДД.ММ.ГГГГ</string>
+    <string name="field_hint_time">00:00</string>
+    <string name="field_hint_input">Введите</string>
+    <string name="field_hint_pick">Выберите</string>
+    <string name="warning_email_wrong_format">Почта введена в неверном формате</string>
+</resources>

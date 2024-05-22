@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/background_rounded_corners_clickable"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="16dp">
+
+    <ru.metasharks.catm.core.ui.view.AvatarView
+        android:id="@+id/profile_image_container"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:innerPadding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textAppearance="@style/Text.Bold"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/is_ready_indicator"
+        app:layout_constraintStart_toEndOf="@id/profile_image_container"
+        app:layout_constraintTop_toTopOf="@id/profile_image_container"
+        tools:text="Александр\nМанувальский" />
+
+    <TextView
+        android:id="@+id/profile_position"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/light_gray"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/is_ready_indicator"
+        app:layout_constraintStart_toStartOf="@id/profile_name"
+        app:layout_constraintTop_toBottomOf="@id/profile_name"
+        tools:text="Начальник участка Начальник участка Начальник участка Начальник участка " />
+
+    <ImageView
+        android:id="@+id/is_ready_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_signed"
+        app:layout_constraintBottom_toBottomOf="@id/add_action_btn"
+        app:layout_constraintEnd_toStartOf="@id/add_action_btn"
+        app:layout_constraintTop_toTopOf="@id/add_action_btn" />
+
+    <ImageView
+        android:id="@+id/add_action_btn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_add_button_state"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

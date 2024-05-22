@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="text_black">#373737</color>
+    <color name="black">#FF000000</color>
+    <color name="black_t50">#80000000</color>
+
+    <color name="background_gray">#f5f5f5</color>
+
+    <color name="dark_gray">#2A2D3F</color>
+    <color name="gray">#454545</color>
+    <color name="light_gray">#888888</color>
+    <color name="bright_gray">#dfdfdf</color>
+    <color name="stroke_gray">#e0e0e0</color>
+
+    <color name="blue">#1A72FE</color>
+    <color name="green">#2ca853</color>
+    <color name="light_green">#40b00b</color>
+    <color name="orange">#ff9419</color>
+    <color name="purple">#bc00b8</color>
+    <color name="yellow">#FFD664</color>
+    <color name="cyan">#00adc7</color>
+    <color name="light_blue">#DBE9FF</color>
+    <color name="red">#f55</color>
+    <color name="error_red">#b00b0b</color>
+
+    <color name="dark_gray_a80">#CC2A2D3F</color>
+    <color name="blue_a20">#331A72FE</color>
+    <color name="light_gray_a50">#80888888</color>
+    <color name="license_background_color_a70">#B3FFE6E6</color>
+</resources>

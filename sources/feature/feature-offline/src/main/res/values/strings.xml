@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pending_actions_started">Началась отправка исходящих запросов</string>
+    <string name="pending_actions_ended">Все исходящие запросы были отправлены</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:buttonTint="@color/blue"
+    android:gravity="top"
+    android:lineSpacingExtra="4dp"
+    android:paddingLeft="12dp"
+    android:paddingTop="8dp"
+    android:textAppearance="@style/Text.P2"
+    tools:text="Инструкатжи инструкатжи инструкатжи инструкатжи инструкатжи инструкатжи инструкатжи инструкатжи инструкатжи " />

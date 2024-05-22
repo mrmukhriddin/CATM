@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    app:navigationIcon="@drawable/ic_navigate_back">
+
+    <ImageView
+        android:id="@+id/catm_logo"
+        android:layout_width="48dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/ic_catm_logo" />
+
+    <TextView
+        android:id="@+id/online_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:text="Offline"
+        android:textAppearance="@style/Text.P3"
+        android:textColor="@color/blue"
+        app:drawableEndCompat="@drawable/ic_offline" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/sync_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="24dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_sync" />
+
+        <ru.metasharks.catm.core.ui.view.NotificationWidget
+            android:id="@+id/notifications_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp" />
+
+    </LinearLayout>
+
+</com.google.android.material.appbar.MaterialToolbar>

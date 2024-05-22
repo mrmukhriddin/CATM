@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_clear_all">Очистить все</string>
+    <string name="notifications_label">Уведомления</string>
+    <string name="work_permit_pattern">Наряд-допуск №%d</string>
+    <string name="btn_text_work_permit">Перейти в наряд-допуск</string>
+    <string name="btn_text_briefing">Перейти в инструктаж</string>
+    <string name="btn_text_current_user">Перейти в личную карточку</string>
+    <string name="btn_text_user">Перейти в карточку работника</string>
+</resources>

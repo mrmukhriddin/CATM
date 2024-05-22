@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_upload_attachment_advice"
+        android:textAppearance="@style/Text.P3"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/upload_file_area"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/background_dashed_stroke_selectable"
+        android:gravity="center"
+        android:text="@string/text_upload_attachment_choose_file"
+        android:textAppearance="@style/Text.P2"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@id/next_btn"
+        tools:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fileUploadedContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/background_rounded_corners_clickable"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="24dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/next_btn">
+
+        <ImageView
+            android:id="@+id/icon_file"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_pdf"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/file_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingHorizontal="16dp"
+            android:textAppearance="@style/Text.P2"
+            android:textColor="@color/blue"
+            app:layout_constraintEnd_toStartOf="@id/remove_file_btn"
+            app:layout_constraintStart_toEndOf="@id/icon_file"
+            app:layout_constraintTop_toTopOf="@id/icon_file"
+            tools:text="Название документа в одну или несколько строк для наглядности отображения" />
+
+        <TextView
+            android:id="@+id/file_type_and_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:paddingHorizontal="16dp"
+            android:textAppearance="@style/Text.P3"
+            android:textColor="@color/text_black"
+            app:layout_constraintStart_toEndOf="@id/icon_file"
+            app:layout_constraintTop_toBottomOf="@id/file_name"
+            tools:text="pdf 1.8 mb" />
+
+        <ImageView
+            android:id="@+id/remove_file_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_btn"
+        style="@style/OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/btn_back_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/next_btn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/next_btn"
+        style="@style/Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:enabled="false"
+        android:text="@string/btn_next_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/back_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

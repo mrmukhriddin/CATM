@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LoadingMaterialButtonWrapper">
+        <attr name="progressIndicatorSizeSubtrahend" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="WindowView">
+        <attr name="view" format="reference" />
+        <attr name="drawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="AvatarView">
+        <attr name="innerPadding" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="LabeledWrapper">
+        <attr name="labelPadding_left" format="dimension" />
+        <attr name="labelPadding_right" format="dimension" />
+        <attr name="labelPadding_bottom" format="dimension" />
+        <attr name="label" format="string" localization="suggested" />
+        <attr name="label_textAppearance" format="reference" />
+        <attr name="label_textColor" format="reference" />
+    </declare-styleable>
+</resources>

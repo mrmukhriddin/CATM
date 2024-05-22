@@ -1,0 +1,33 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+rootProject.name = "CATM"
+include ':app'
+
+includeRecursive(file('sources'))
+
+void includeRecursive(File dir) {
+    if (isModule(dir)) {
+        String moduleName = ":$dir.name"
+        include(moduleName)
+        project(moduleName).projectDir = dir
+    } else {
+        dir.eachDir { includeRecursive(it) }
+    }
+}
+
+static boolean isModule(File dir) {
+    return new File(dir, 'build.gradle').isFile()
+}

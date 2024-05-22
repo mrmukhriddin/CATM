@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlinx-serialization'
+
+apply from: "$rootDir/gradle/detekt.gradle"
+apply from: "$rootDir/gradle/versions/versions.gradle"
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    buildFeatures {
+        viewBinding true
+    }
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+    }
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        buildToolsVersion rootProject.ext.buildToolsVersion
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+    lintOptions {
+        checkTestSources false
+        ignoreTestSources true
+        checkReleaseBuilds false
+        checkGeneratedSources false
+        disable "InvalidPackage",
+                "UsingOnClickInXml"
+    }
+}

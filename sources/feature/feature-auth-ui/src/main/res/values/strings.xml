@@ -1,0 +1,9 @@
+<resources>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="login_action_text">Войти</string>
+    <string name="about_app">О приложении</string>
+    <string name="warning_token_expired">Сессия закончилась, авторизуйтесь заново</string>
+    <string name="error_input_empty_username">Введите логин</string>
+    <string name="error_input_empty_password">Введите пароль</string>
+</resources>

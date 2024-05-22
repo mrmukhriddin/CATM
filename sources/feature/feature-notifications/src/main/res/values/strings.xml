@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notifications_count_title">Непрочитанные уведомления</string>
+    <plurals name="notifications_count_plural">
+        <item quantity="one">У вас %d непрочитанное уведомление</item>
+        <item quantity="few">У вас %d непрочитанных уведомления</item>
+        <item quantity="other">У вас %d непрочитанных уведомлений</item>
+    </plurals>
+
+    <string name="notifications_new_title">Новое уведомление</string>
+
+    <string name="notifications_warning_awaiting_connection">Приложение ожидает соединения</string>
+    <string name="notifications_warning_receiving">Приложение получает уведомления</string>
+    <string name="notifications_warning_not_receiving_error">Приложение не получает уведомления из-за ошибки</string>
+</resources>

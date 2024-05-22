@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/avatar_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_circle"
+            android:backgroundTint="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/avatar_letters"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autoSizeStepGranularity="4sp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/ic_circle"
+            android:gravity="center"
+            android:lines="1"
+            android:textAppearance="@style/Text.Bold" />
+
+    </ViewFlipper>
+</merge>

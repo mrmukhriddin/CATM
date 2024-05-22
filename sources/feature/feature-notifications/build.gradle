@@ -1,0 +1,23 @@
+androidModule("feature-notifications")
+apply plugin: 'kotlinx-serialization'
+apply plugin: 'dagger.hilt.android.plugin'
+
+dependencies {
+
+    implementation Libs.kotlinxSerialization
+    implementation Libs.hilt
+    implementation Libs.rxKotlin3
+    implementation Libs.rxAndroid3
+    implementation Libs.retrofit
+    implementation Libs.timber
+    implementation Libs.webSocket
+    implementation Libs.roomRuntime
+    implementation Libs.roomRxJava
+    implementation Libs.jodaTimeAndroid
+
+    kapt Libs.hiltCompiler
+    implementation project(":feature-profile")
+    implementation project(":core-network")
+    implementation project(":core-utils")
+    implementation project(":core-storage")
+}

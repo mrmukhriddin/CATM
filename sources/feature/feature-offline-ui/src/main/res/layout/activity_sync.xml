@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar_container"
+            layout="@layout/toolbar" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:paddingHorizontal="24dp"
+            android:text="@string/label_sync"
+            android:textAppearance="@style/Text.H2" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingBottom="36dp">
+
+                <ru.metasharks.catm.core.ui.view.LabeledWrapper
+                    android:id="@+id/profile_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    app:label="Личный профиль"
+                    app:labelPadding_bottom="4dp"
+                    app:label_textAppearance="@style/Text.H4">
+
+                    <TextView
+                        android:id="@+id/save_profile_timestamp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:textAppearance="@style/Text.P3"
+                        android:textColor="@color/light_gray"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/warning_save_for_offline"
+                        android:textAppearance="@style/Text.P2"
+                        android:textColor="@color/dark_gray" />
+
+                    <ru.metasharks.catm.core.ui.view.LoadingMaterialButtonWrapper
+                        android:id="@+id/save_profile_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:progressIndicatorSizeSubtrahend="24dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btn_save" />
+
+                    </ru.metasharks.catm.core.ui.view.LoadingMaterialButtonWrapper>
+
+                </ru.metasharks.catm.core.ui.view.LabeledWrapper>
+
+                <ru.metasharks.catm.core.ui.view.LabeledWrapper
+                    android:id="@+id/work_permits_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:paddingHorizontal="24dp"
+                    app:label="Наряд-допуски"
+                    app:labelPadding_bottom="4dp"
+                    app:label_textAppearance="@style/Text.H4">
+
+                    <TextView
+                        android:id="@+id/save_work_permits_timestamp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:textAppearance="@style/Text.P3"
+                        android:textColor="@color/light_gray"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/warning_save_for_offline"
+                        android:textAppearance="@style/Text.P2"
+                        android:textColor="@color/dark_gray" />
+
+                    <ru.metasharks.catm.core.ui.view.LoadingMaterialButtonWrapper
+                        android:id="@+id/save_work_permits_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:progressIndicatorSizeSubtrahend="24dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btn_save" />
+
+                    </ru.metasharks.catm.core.ui.view.LoadingMaterialButtonWrapper>
+
+                </ru.metasharks.catm.core.ui.view.LabeledWrapper>
+
+                <ru.metasharks.catm.core.ui.view.LabeledWrapper
+                    android:id="@+id/workers_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:paddingHorizontal="24dp"
+                    app:label="Работники"
+                    app:labelPadding_bottom="4dp"
+                    app:label_textAppearance="@style/Text.H4">
+
+                    <TextView
+                        android:id="@+id/save_workers_timestamp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:textAppearance="@style/Text.P3"
+                        android:textColor="@color/light_gray"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/warning_save_for_offline"
+                        android:textAppearance="@style/Text.P2"
+                        android:textColor="@color/dark_gray" />
+
+                    <ru.metasharks.catm.core.ui.view.LoadingMaterialButtonWrapper
+                        android:id="@+id/save_workers_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:progressIndicatorSizeSubtrahend="24dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btn_save" />
+
+                    </ru.metasharks.catm.core.ui.view.LoadingMaterialButtonWrapper>
+
+                </ru.metasharks.catm.core.ui.view.LabeledWrapper>
+
+                <ru.metasharks.catm.core.ui.view.LabeledWrapper
+                    android:id="@+id/briefings_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:paddingHorizontal="24dp"
+                    app:label="Инструктажи"
+                    app:labelPadding_bottom="4dp"
+                    app:label_textAppearance="@style/Text.H4">
+
+                    <TextView
+                        android:id="@+id/save_briefings_timestamp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:textAppearance="@style/Text.P3"
+                        android:textColor="@color/light_gray"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/warning_save_for_offline"
+                        android:textAppearance="@style/Text.P2"
+                        android:textColor="@color/dark_gray" />
+
+                    <ru.metasharks.catm.core.ui.view.LoadingMaterialButtonWrapper
+                        android:id="@+id/save_briefings_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:progressIndicatorSizeSubtrahend="24dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btn_save" />
+
+                    </ru.metasharks.catm.core.ui.view.LoadingMaterialButtonWrapper>
+
+                </ru.metasharks.catm.core.ui.view.LabeledWrapper>
+
+                <ru.metasharks.catm.core.ui.view.LoadingMaterialButtonWrapper
+                    android:id="@+id/clear_all_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="20dp"
+                    app:progressIndicatorSizeSubtrahend="24dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_clear_all" />
+
+                </ru.metasharks.catm.core.ui.view.LoadingMaterialButtonWrapper>
+
+                <ru.metasharks.catm.core.ui.view.LoadingMaterialButtonWrapper
+                    android:id="@+id/clear_pending_requests_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    app:progressIndicatorSizeSubtrahend="24dp"
+                    tools:visibility="visible">
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DELETE PENDING (DEBUG)" />
+
+                </ru.metasharks.catm.core.ui.view.LoadingMaterialButtonWrapper>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

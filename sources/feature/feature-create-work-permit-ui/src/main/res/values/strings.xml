@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="activity_create_work_permit_label">Наряд-допуск</string>
+    <string name="search_hint">Искать</string>
+    <string name="work_permit_with_work_type">Наряд-допуск на %s</string>
+    <string name="error_text_file_to_big">Этот файл слишком большой. Максимальный размер - 15 МБ</string>
+
+    <string name="step_work_type">Выберите тип опасных работ, на которые нужен наряд-допуск</string>
+    <string name="step_general_info">Основная информация</string>
+    <string name="step_dangerous_factors">Действующие опасные факторы (стандартные)</string>
+    <string name="step_equipment">Используемое оборудование, инструмент</string>
+    <string name="step_work_scheme">Схема проведения работ, прилагаемая к наряду-допуску, с указанием</string>
+    <string name="step_employees">Состав бригады</string>
+    <string name="step_attachment">Добавить инструктаж</string>
+    <string name="step_approval">Допуск/согласование</string>
+
+    <string name="add_workers_btn_label">Добавить работников</string>
+    <string name="warning_date_wrong_format">Дата введена в неверном формате</string>
+    <string name="warning_date_passed">Дата начала уже прошла</string>
+    <string name="warning_date_mismatch">Дата истечения срока раньше даты старта</string>
+    <string name="btn_create_label">Создать</string>
+    <string name="btn_back_label">Назад</string>
+    <string name="btn_next_label">Далее</string>
+    <string name="text_upload_attachment_advice">Выберите и загрузите файл инструктажа для отправки работникам, которые будут участвовать в наряд-допуске</string>
+    <string name="text_upload_attachment_choose_file">Выбрать и загрузить файл</string>
+
+    <string name="field_label_organization">Организация</string>
+    <string name="field_label_work_type">На выполнение работ</string>
+    <string name="field_label_place">Место выполнения работ</string>
+    <string name="field_label_start_time">Начало работ:</string>
+    <string name="field_label_end_time">Действителен до:</string>
+    <string name="field_label_shift">Смена</string>
+    <string name="field_label_responsible_manager">Ответственный руководитель работ</string>
+    <string name="field_label_executor">Ответственный исполнитель работ</string>
+    <string name="field_label_permit_issuer">Выдавший наряд-допуск</string>
+    <string name="field_label_permit_acceptor">Получивший наряд-допуск</string>
+    <string name="field_label_responsible_manager_approval">Ответственный руководитель (исполнитель) работ</string>
+    <string name="field_label_admitting_person">Допускающий к работе:</string>
+    <string name="field_label_indusrty_safety_officer">Специалист службы производственной безопасности</string>
+    <string name="field_label_work_safety_officer">Специалист по охране труда</string>
+    <string name="field_label_approver">Лицо, утвердившее наряд-допуск</string>
+    <string name="field_radio_shift_day">День</string>
+    <string name="field_radio_shift_night">Ночь</string>
+    <string name="field_clarification_work_type">Наименование работ и условия их выполнения</string>
+    <string name="field_clarification_place">Отделение, цех, участок, установка, аппарат, здание, сооружение</string>
+</resources>

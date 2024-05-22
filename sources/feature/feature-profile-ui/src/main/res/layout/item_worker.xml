@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_rounded_corners_clickable"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="16dp">
+
+    <include
+        android:id="@+id/profile_core_info_container"
+        layout="@layout/profile_core_info" />
+
+</FrameLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="12dp">
+
+    <ImageView
+        android:id="@+id/icon_file"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src="@drawable/ic_pdf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/file_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:textAppearance="@style/Text.P2"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icon_file"
+        app:layout_constraintTop_toTopOf="@id/icon_file"
+        tools:text="Название документа в одну или несколько строк для наглядности отображения" />
+
+    <TextView
+        android:id="@+id/file_type_and_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:paddingHorizontal="16dp"
+        android:textAppearance="@style/Text.P3"
+        android:textColor="@color/text_black"
+        app:layout_constraintStart_toEndOf="@id/icon_file"
+        app:layout_constraintTop_toBottomOf="@id/file_name"
+        tools:text="pdf 1.8 mb" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

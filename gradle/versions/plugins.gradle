@@ -1,0 +1,19 @@
+apply from: rootProject.file('gradle/versions/common.gradle')
+
+ext.PluginVersions = [
+        detekt             : "1.19.0",
+        googleServices     : "4.3.10",
+        firebaseCrashlytics: "2.8.1",
+        hilt               : "2.41",
+]
+
+ext.Plugins = [
+        androidGradle      : "com.android.tools.build:gradle:${CommonPluginVersions.androidGradle}",
+        kotlin             : "org.jetbrains.kotlin:kotlin-gradle-plugin:${CommonVersions.kotlin}",
+        kotlinNoArg        : "org.jetbrains.kotlin:kotlin-noarg:${CommonVersions.kotlin}",
+        kotlinSerialization: "org.jetbrains.kotlin:kotlin-serialization:${CommonVersions.kotlin}",
+        detekt             : "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:${PluginVersions.detekt}",
+        hilt               : "com.google.dagger:hilt-android-gradle-plugin:${PluginVersions.hilt}",
+        googleServices     : "com.google.gms:google-services:${PluginVersions.googleServices}",
+        firebaseCrashlytics: "com.google.firebase:firebase-crashlytics-gradle:${PluginVersions.firebaseCrashlytics}"
+]

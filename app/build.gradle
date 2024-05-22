@@ -1,0 +1,93 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlinx-serialization'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+apply from: "$rootDir/gradle/detekt.gradle"
+apply from: "$rootDir/gradle/versions/versions.gradle"
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        buildToolsVersion rootProject.buildToolsVersion
+        applicationId "ru.metasharks.catm"
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':core-navigation')
+    implementation project(':core-network')
+    implementation project(':core-storage')
+    implementation project(':core-ui')
+    implementation project(':core-utils')
+    implementation project(':core-license')
+    implementation project(':feature-about-app-ui')
+    implementation project(':feature-auth')
+    implementation project(':feature-auth-ui')
+    implementation project(':feature-profile')
+    implementation project(':feature-profile-ui')
+    implementation project(':feature-briefings')
+    implementation project(':feature-briefings-ui')
+    implementation project(':feature-media-preview')
+    implementation project(':feature-documents')
+    implementation project(':feature-documents-ui')
+    implementation project(':feature-education-ui')
+    implementation project(':feature-feedback')
+    implementation project(':feature-feedback-ui')
+    implementation project(':feature-qr')
+    implementation project(':feature-create-work-permit')
+    implementation project(':feature-create-work-permit-ui')
+    implementation project(':feature-work-permit')
+    implementation project(':feature-work-permit-ui')
+    implementation project(':feature-notifications')
+    implementation project(':feature-notifications-ui')
+    implementation project(':feature-offline')
+    implementation project(':feature-offline-ui')
+
+    implementation Libs.coreKtx
+    implementation Libs.cicerone
+    implementation Libs.appCompat
+    implementation Libs.material
+    implementation Libs.constraintLayout
+    implementation Libs.splashScreen
+    implementation Libs.hilt
+    implementation Libs.viewModelKtx
+    implementation Libs.activityKtx
+    implementation Libs.fragmentKtx
+    implementation Libs.retrofit
+    implementation Libs.okHttp
+    implementation Libs.rxAndroid3
+    implementation Libs.timber
+    implementation Libs.rxKotlin3
+    implementation Libs.kotlinxSerialization
+    implementation Libs.retrofitAdapterRxJava3
+    implementation Libs.retrofitKotlinSerialization
+    implementation Libs.roomRuntime
+    implementation Libs.roomRxJava
+
+    implementation platform(Libs.firebase)
+    implementation Libs.firebaseAnalytics
+    implementation Libs.firebaseCrashlytics
+
+    kapt Libs.hiltCompiler
+    kapt Libs.roomCompiler
+}

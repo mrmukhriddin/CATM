@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="24dp"
+    android:background="@drawable/background_rounded_corners_clickable"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="16dp">
+
+    <TextView
+        android:id="@+id/dp_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Text.H5"
+        tools:text="14.08.2022" />
+
+    <TextView
+        android:id="@+id/dp_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/Text.P3"
+        tools:text="Отбор проб: 21:00" />
+
+    <TextView
+        android:id="@+id/dp_responsible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/Text.P3"
+        tools:text="Ответственный: Викторов А.В" />
+
+    <TextView
+        android:id="@+id/dp_permitter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/Text.P3"
+        tools:text="Допускающий: Агафонов А.В" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/primary_button"
+        style="@style/Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        tools:text="Окончить работы и подписать" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/status_displayer"
+        style="@style/Button.OnlyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        tools:text="Удалить" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/secondary_button"
+        style="@style/OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:backgroundTint="@android:color/transparent"
+        tools:text="Удалить" />
+
+    <TextView
+        android:id="@+id/waiting_connection_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/Text.P3"
+        android:text="@string/warning_awaiting_pending_action" />
+
+</LinearLayout>

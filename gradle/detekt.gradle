@@ -1,0 +1,99 @@
+import org.gradle.internal.os.OperatingSystem
+
+import javax.inject.Inject
+
+apply plugin: 'io.gitlab.arturbosch.detekt'
+apply from: "$rootDir/gradle/versions/versions.gradle"
+
+dependencies {
+    detekt "io.gitlab.arturbosch.detekt:detekt-formatting:$Versions.Plugins.detekt"
+    detekt "io.gitlab.arturbosch.detekt:detekt-cli:$Versions.Plugins.detekt"
+}
+
+ext {
+    ciBuild = project.hasProperty('ci')
+}
+
+detekt {
+    version = Versions.Plugins.detekt
+    source = files("src")
+    config = rootProject.files("gradle/detekt-config.yml")
+    buildUponDefaultConfig = true
+    parallel = true
+}
+
+def detektTask = tasks.named("detekt") {
+    include("**/*.kt")
+}
+
+// Open HTML report if detekt fails
+@CacheableTask
+abstract class OpenDetektHtmlReportInBrowser extends DefaultTask {
+
+    @Inject
+    abstract ExecOperations getExecOperations()
+
+    @Input
+    @Optional
+    abstract Property<String> getInputFilePath()
+
+    @Input
+    abstract Property<OperatingSystem> getOperatingSystem()
+
+    @TaskAction
+    void process() {
+        File file = null
+        if (inputFilePath != null) {
+            file = new File(inputFilePath.get())
+        }
+        OperatingSystem os = operatingSystem.get()
+        if (file != null && file.exists() && !file.text.contains("<div>Total: 0</div>")) {
+            execOperations.exec {
+                if (os.macOsX) {
+                    it.commandLine('open', file)
+                } else if (os.linux) {
+                    it.commandLine('xdg-open', file)
+                } else if (os.windows) {
+                    it.commandLine('cmd', '/c', 'start', file)
+                }
+            }
+        }
+    }
+}
+
+def openHtmlReportTask = tasks.register("openDetektHtmlReportInBrowser", OpenDetektHtmlReportInBrowser)
+openHtmlReportTask.configure {
+    def reportPathProvider = detektTask.get().htmlReportFile.getOrNull()
+    if (reportPathProvider != null) {
+        inputFilePath = reportPathProvider.asFile.path
+    }
+    operatingSystem = OperatingSystem.current()
+
+    def ciBuild = project.hasProperty('ci')
+    onlyIf { !ciBuild }
+}
+
+detektTask.configure {
+    finalizedBy openHtmlReportTask
+    jvmTarget = "11"
+    reports {
+        xml.required.set(ciBuild)
+        xml.outputLocation.set(file("${project.buildDir}/reports/detekt-results-${project.name}.xml"))
+
+        html.required.set(!ciBuild)
+        html.outputLocation.set(file("${project.buildDir}/reports/detekt-results-${project.name}.html"))
+
+        txt.required.set(false)
+        sarif.required.set(false)
+    }
+}
+
+def detektBaselineTask = tasks.named("detektBaseline")
+detektBaselineTask.configure {
+    jvmTarget = "11"
+}
+
+def checkTask = tasks.named("check")
+checkTask.configure {
+    dependsOn detektTask
+}

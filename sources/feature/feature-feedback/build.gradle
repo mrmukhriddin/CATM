@@ -1,0 +1,15 @@
+androidModule("feature-feedback")
+apply plugin: 'kotlinx-serialization'
+apply plugin: 'dagger.hilt.android.plugin'
+
+dependencies {
+
+    implementation Libs.kotlinxSerialization
+    implementation Libs.hilt
+    implementation Libs.rxKotlin3
+    implementation Libs.retrofit
+
+    kapt Libs.hiltCompiler
+    implementation project(":core-network")
+    implementation project(":core-storage")
+}

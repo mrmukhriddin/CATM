@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tag_bound_list_item" type="id" />
+    <item name="tag_placeholder_list_item" type="id" />
+</resources>

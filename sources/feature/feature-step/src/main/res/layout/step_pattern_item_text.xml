@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.metasharks.catm.core.ui.view.LabeledWrapper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/StepLabelledWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:label="Организация">
+
+    <EditText
+        android:id="@+id/input"
+        style="@style/OutlinedEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:imeOptions="actionDone"
+        tools:hint="Введите" />
+
+    <TextView
+        android:id="@+id/clarification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/Text.P4"
+        tools:text="Отделение, цех, участок, установка, аппарат, здание, сооружение" />
+
+</ru.metasharks.catm.core.ui.view.LabeledWrapper>

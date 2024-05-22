@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pattern_last_update">Последнее обновление от %s</string>
+    <string name="label_sync">Синхронизация</string>
+
+    <string name="btn_save">Загрузить данные</string>
+    <string name="btn_update">Обновить данные</string>
+    <string name="btn_clear_all">Очистить все данные</string>
+    <string name="warning_save_for_offline">Хранить данные для работы в офлайн</string>
+
+    <string name="dialog_title_has_internet_connection">Есть интернет-соединение</string>
+    <string name="dialog_btn_has_internet_connection">Перейти в online режим</string>
+
+    <string name="dialog_title_no_internet_connection">Нет интернет-соединения</string>
+    <string name="dialog_btn_no_internet_connection">Перейти в offline режим</string>
+    <string name="dialog_btn_accept">Подтвердить</string>
+    <string name="dialog_btn_cancel">Отмена</string>
+
+    <string name="snack_saved_profile">Профиль успешно загружен</string>
+    <string name="snack_saved_workers">Рабочие успешно загружены</string>
+    <string name="snack_saved_work_permits">Наряд-допуски успешно загружены</string>
+    <string name="snack_saved_briefings">Инструктажи успешно загружен</string>
+    <string name="snack_cleared_all">Все успешно очищено</string>
+    <string name="snack_downloading">Сохранение еще в процессе</string>
+    <string name="dialog_title_own_will_to_online">Вы хотите перейти в online режим?</string>
+    <string name="dialog_title_own_will_to_offline">Вы хотите перейти в offline режим?</string>
+</resources>

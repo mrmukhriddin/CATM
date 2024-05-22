@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wp_work_permits_label">Наряд-допуски</string>
+    <string name="wp_filter_label">Фильтр</string>
+    <string name="wp_details_additional_documents_label">Дополнительная документация</string>
+    <string name="wp_details_risk_factors_label">Наряд-допуск</string>
+    <string name="wp_details_workers_label">Работники</string>
+    <string name="wp_details_signers_label">Согласования</string>
+
+    <string name="wp_item_created">Создан %s</string>
+    <string name="wp_item_extended">Продлен до %s</string>
+    <string name="wp_item_work_permit_number">Наряд-допуск №%d</string>
+    <string name="wp_item_work_permit_no_number">Наряд-допуск №Б/Н</string>
+    <string name="wp_awaiting_internet_connection">Запрос не отправлен на сервер. Отсутствует сеть Интернет.</string>
+    <string name="wp_item_workers_count">Работников: %d</string>
+    <string name="create_new_work_permit_text">Добавить новый наряд</string>
+    <string name="filters_text">Фильтры</string>
+    <string name="wp_status_all">Все</string>
+
+    <string name="wp_dates_pattern">%s - %s</string>
+    <string name="wp_single_date_pattern">%s</string>
+    <string name="reset_btn_text">Сбросить</string>
+    <string name="show_btn_text">Показать</string>
+    <string name="save_btn_text">Сохранить</string>
+    <string name="filter_date_range">Период создания</string>
+    <string name="work_type">Тип работ</string>
+    <string name="supervisor">Ответственный руководитель</string>
+    <string name="search_hint">Искать</string>
+    <string name="unselected_placeholder_text">Выберите</string>
+    <string name="error_workers_did_not_pass">Работники не прошли инструктаж к наряд-допуску</string>
+
+    <string name="menu_option_workers">Работники</string>
+    <string name="menu_option_signers">Согласования</string>
+    <string name="menu_option_additional_documents">Дополнительная документация</string>
+    <string name="pattern_number_of_overall">%d/%d</string>
+    <string name="error_text_file_to_big">Этот файл слишком большой. Максимальный размер - 15 МБ</string>
+    <string name="choose_and_upload_file_label">Выбрать и загрузить файл</string>
+
+    <string name="dialog_delete_wp_title">Удалить наряд-допуск?</string>
+    <string name="dialog_delete_wp_message">Данное действие необратимо.</string>
+    <string name="dialog_sign_title">Подписать наряд-допуск?</string>
+    <string name="dialog_send_to_signing_title">Отправить на согласование?</string>
+    <string name="dialog_sign_message">Данное действие необратимо.</string>
+    <string name="dialog_sign_positive">Подписать</string>
+    <string name="menu_option_dangerous_factors">Обязательные мероприятия по снижению воздействия опасных факторов</string>
+    <string name="menu_option_gas_analysis">Анализы газовоздушной среды</string>
+    <string name="menu_option_daily_permits">Ежедневные допуски</string>
+
+    <string name="btn_signed_text">Подписано</string>
+    <string name="btn_signed_pattern_text">Подписано (%s)</string>
+    <string name="btn_delete_text">Удалить</string>
+    <string name="btn_send_to_signing_text">Отправить на согласование</string>
+    <string name="btn_sign_text">Подписать</string>
+    <string name="btn_sign_pattern_text">Подписать (%s)</string>
+    <string name="btn_reject_text">Отклонить</string>
+    <string name="btn_on_signing_text">На согласовании</string>
+    <string name="dialog_reject_title">Отклонить наряд-допуск?</string>
+    <string name="dialog_reject_message">Данное действие необратимо.</string>
+    <string name="dialog_reject_positive">Отклонить</string>
+    <string name="text_rejected">Отклонено</string>
+    <string name="text_check_risk_factors">Ознакомиться</string>
+    <string name="text_check_risk_factors_warning">Подписывая наряд-допуск, вы подтверждаете, что ознакомились с каждым пунктом по каждому разделу</string>
+    <string name="gaa_btn_add">Заполнить данные анализа</string>
+    <string name="btn_delete_gas_air_label">Удалить</string>
+    <string name="dialog_btn_cancel">Отмена</string>
+
+    <string name="text_check_risk_factors_label">Обязательные мероприятия по снижению воздействия опасных факторов</string>
+    <string name="text_check_risk_factors_message">Подписывая наряд-допуск, вы подтверждаете, что ознакомились с каждым пунктом по каждому разделу</string>
+
+    <string name="probe_time">Отбор проб:</string>
+    <string name="probe_place">Место отбора проб:</string>
+    <string name="probe_components">Определяемые компоненты:</string>
+    <string name="probe_permissible_concentration">Допустимая концентрация:</string>
+    <string name="probe_concentration">Результаты анализа:</string>
+    <string name="probe_device">Наименование прибора:</string>
+    <string name="probe_next">Дата следующей поверки:</string>
+    <string name="probe_responsible_person">Лицо, проводящее анализ:</string>
+
+    <string name="wp_details_gas_air_analyzes">Анализы газовоздушной среды</string>
+    <string name="field_label_probe_date_and_time">Дата и время отбора проб</string>
+    <string name="field_label_probe_place">Место отбора проб</string>
+    <string name="field_label_probe_components">Определяемые компоненты</string>
+    <string name="field_label_probe_permissible_concentration">Допустимая концентрация</string>
+    <string name="field_label_probe_concentration">Результаты анализа</string>
+    <string name="field_label_probe_device">Наименование прибора</string>
+    <string name="field_label_probe_date_next">Дата следующей поверки</string>
+    <string name="btn_label_add_analysis">Добавить анализ</string>
+    <string name="wp_details_create_gas_air_analysis">Анализ газовоздушной среды</string>
+    <string name="warning_probe_date_mismatch">Дата следующего анализа раньше, чем нынешний</string>
+    <string name="field_hint_probe_device_model">Марка</string>
+    <string name="field_hint_probe_device_number">№</string>
+    <string name="dialog_title_delete_gas_air_analysis">Удалить анализ газовоздушной среды?</string>
+
+    <string name="dialog_btn_delete_positive">Удалить</string>
+    <string name="dialog_btn_negative">Отмена</string>
+    <string name="btn_extend_text">Продление</string>
+    <string name="btn_close_text">Закрытие</string>
+    <string name="dialog_title_close_work_permit">Закрыть наряд-допуск?</string>
+    <string name="dialog_btn_close_work_permit">Закрыть</string>
+    <string name="wp_extend_label">Продление</string>
+    <string name="btn_extended_text">Продлен до %s</string>
+    <string name="btn_awaiting_extension_text">Запрос на продление до %s</string>
+    <string name="btn_extend_until_text">Продлить до %s</string>
+    <string name="dialog_title_sign_extension_work_permit">Продлить наряд-допуск?</string>
+    <string name="dialog_btn_sign_extension_work_permit">Подписать</string>
+    <string name="field_label_extend_until">Продлить до</string>
+    <string name="field_label_extend_issuer">Выдавший наряд-допуск</string>
+    <string name="field_label_extend_other">Другое, если необходимо</string>
+    <string name="dp_add_btn">Оформить ежедневный допуск</string>
+    <string name="wp_daily_permits_label">Ежедневные допуски</string>
+
+    <string name="dp_work_permit_start">Начало работ:</string>
+    <string name="dp_work_permit_end">Окончание работ:</string>
+
+    <string name="dp_time">Начало работ:</string>
+    <string name="dp_responsible">Ответственный:</string>
+    <string name="dp_permitter">Допускающий:</string>
+    <string name="btn_dp_on_signing">На согласовании</string>
+    <string name="btn_dp_sign">Подписать ежедневный допуск</string>
+    <string name="btn_dp_signed">Подписано</string>
+    <string name="btn_dp_end_work_and_sign">Окончить работы и подписать</string>
+    <string name="btn_dp_work_ended_pattern">Работы окончены %s в %s</string>
+
+    <string name="wp_create_daily_permit_label">Ежедневый допуск</string>
+    <string name="wp_end_daily_permit_label">Окончание работ</string>
+    <string name="field_label_dp_work_start">Начало работ</string>
+    <string name="field_label_dp_permitter">Допускающий</string>
+    <string name="dialog_title_delete_daily_permit">Удалить ежедневный допуск?</string>
+    <string name="field_label_dp_work_end">Окончание работ</string>
+
+    <string name="dp_warning_create">Указанные в наряде-допуске меры безопасности выполнены, персонал проинструктирован, работы разрешены</string>
+    <string name="dp_btn_create">Создать допуск</string>
+
+    <string name="dp_warning_end">Работы окончены, рабочее место убрано, персонал с рабочего места выведен</string>
+    <string name="dp_btn_end">Окончить работы и подписать</string>
+    <string name="btn_add_workers">Добавить работников</string>
+    <string name="btn_save_workers">Сохранить</string>
+    <string name="btn_save_workers_warning">Сохранить обновленную бригаду</string>
+    <string name="btn_sign_workers">Подписать</string>
+    <string name="btn_sign_workers_warning">Подписать инструктаж новым работникам</string>
+    <string name="waiting_for_connection">Ожидает отправления</string>
+    <string name="warning_awaiting_pending_action">Запрос не отправлен на сервер. Отсутствует сеть Интернет.</string>
+
+    <string name="warning_start_date_must_be_after_end_date">Время окончания должно быть позже времени начала</string>
+</resources>

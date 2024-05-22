@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_app_label">О приложении</string>
+    <string name="app_version_label">Версия приложения</string>
+    <string name="distributor_label">Дистрибьютор</string>
+    <string name="author_label">Автор</string>
+</resources>

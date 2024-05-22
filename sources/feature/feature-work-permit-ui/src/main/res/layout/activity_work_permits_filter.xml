@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar_container"
+            layout="@layout/toolbar_notifications" />
+
+        <ru.metasharks.catm.core.ui.view.LabeledWrapper
+            android:id="@+id/date_field_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="24dp"
+            app:label="@string/filter_date_range"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_container">
+
+            <TextView
+                android:id="@+id/date_field"
+                style="@style/TextPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/unselected_placeholder_text"
+                tools:text="11.08.2021 — 12.09.2021" />
+
+        </ru.metasharks.catm.core.ui.view.LabeledWrapper>
+
+        <ru.metasharks.catm.core.ui.view.LabeledWrapper
+            android:id="@+id/work_type_field_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="24dp"
+            app:label="@string/work_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date_field_wrapper">
+
+            <TextView
+                android:id="@+id/work_type_field"
+                style="@style/TextPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/unselected_placeholder_text"
+                tools:text="Работы на высоте" />
+
+        </ru.metasharks.catm.core.ui.view.LabeledWrapper>
+
+        <ru.metasharks.catm.core.ui.view.LabeledWrapper
+            android:id="@+id/supervisor_field_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="24dp"
+            app:label="@string/supervisor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/work_type_field_wrapper">
+
+            <TextView
+                android:id="@+id/supervisor_field"
+                style="@style/TextPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/unselected_placeholder_text"
+                tools:text="Сташевский А.В" />
+
+        </ru.metasharks.catm.core.ui.view.LabeledWrapper>
+
+        <CheckBox
+            android:id="@+id/need_sign_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:text="Требует подписания"
+            android:textAppearance="@style/Text.P2"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/supervisor_field_wrapper" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/reset_filters_btn"
+            style="@style/OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/reset_btn_text"
+            app:layout_constraintBottom_toBottomOf="@id/save_filters_btn"
+            app:layout_constraintEnd_toStartOf="@id/save_filters_btn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_filters_btn"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/show_btn_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/reset_filters_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

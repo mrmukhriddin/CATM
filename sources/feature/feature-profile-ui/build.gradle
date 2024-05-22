@@ -1,0 +1,45 @@
+androidModule("feature-profile-ui")
+apply plugin: 'dagger.hilt.android.plugin'
+
+dependencies {
+    implementation Libs.coreKtx
+    implementation Libs.appCompat
+    implementation Libs.material
+    implementation Libs.constraintLayout
+    implementation Libs.viewModelKtx
+    implementation Libs.activityKtx
+    implementation Libs.fragmentKtx
+    implementation Libs.hilt
+    implementation Libs.retrofit
+    implementation Libs.okHttp
+    implementation Libs.timber
+    implementation Libs.rxKotlin3
+    implementation Libs.rxAndroid3
+    implementation Libs.kotlinxSerialization
+    implementation Libs.cicerone
+    implementation Libs.byViewBinding
+    implementation Libs.glide
+    implementation Libs.roomRuntime
+    implementation Libs.roomRxJava
+    implementation Libs.adapterDelegates
+    implementation Libs.paging
+    implementation Libs.pagingRxJava3
+    implementation Libs.rxBinding
+    implementation Libs.shimmer
+    implementation Libs.swipeRefreshLayout
+
+    kapt Libs.hiltCompiler
+    kapt Libs.glideCompiler
+    kapt Libs.roomCompiler
+
+    implementation project(':feature-auth')
+    implementation project(':feature-profile')
+    implementation project(':feature-notifications')
+    implementation project(':feature-offline')
+    implementation project(':core-navigation')
+    implementation project(':core-network')
+    implementation project(':core-ui')
+    implementation project(':core-utils')
+    implementation project(':core-license')
+    implementation project(':core-storage')
+}

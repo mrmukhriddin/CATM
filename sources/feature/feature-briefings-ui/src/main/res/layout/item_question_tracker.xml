@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:background="@drawable/background_question_tracker"
+    android:gravity="center"
+    android:textAppearance="@style/Text.P3"
+    android:textColor="@color/blue_enabled"
+    tools:text="1" />

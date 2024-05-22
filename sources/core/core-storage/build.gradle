@@ -1,0 +1,10 @@
+androidModule("core-storage")
+apply plugin: 'dagger.hilt.android.plugin'
+
+dependencies {
+
+    implementation Libs.hilt
+    implementation Libs.timber
+
+    kapt Libs.hiltCompiler
+}

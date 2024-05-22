@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="field_label_theme">Тема обращения</string>
+    <string name="field_label_email">Ваш e-mail</string>
+    <string name="field_label_content">Ваше сообщение</string>
+
+    <string name="dialog_title_feedback_success">Ваше сообщение отправлено</string>
+    <string name="dialog_btn_positive_feedback_success">Ваше сообщение отправлено</string>
+
+    <string name="btn_send">Отправить</string>
+    <string name="title_feedback">Обратная связь</string>
+</resources>

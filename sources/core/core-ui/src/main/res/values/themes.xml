@@ -1,0 +1,181 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.CATM.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_full_catm_logo</item>
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="postSplashScreenTheme">@style/Theme.CATM</item>
+    </style>
+
+    <style name="Theme.CATM" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/light_blue</item>
+        <item name="colorSecondaryVariant">@color/light_blue</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:textViewStyle">@style/TextViewStyle</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="toolbarStyle">@style/AppToolbar</item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+        <item name="checkboxStyle">@style/CheckBoxStyle</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="OutlineTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxStrokeColor">@color/default_stroke_color_input_text</item>
+        <item name="hintTextAppearance">@style/Text.DefaultHint</item>
+    </style>
+
+    <style name="DefaultEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorHint">@color/light_gray_a50</item>
+        <item name="android:textAppearance">@style/Text.P2</item>
+        <item name="android:textColor">@color/default_text_color</item>
+        <item name="android:paddingVertical">14dp</item>
+        <item name="android:background">@drawable/background_rounded_corners_edit_text</item>
+    </style>
+
+    <style name="OutlinedEditText" parent="DefaultEditText">
+        <item name="android:background">@drawable/background_rounded_corners_outline</item>
+    </style>
+
+    <style name="DefaultEditText.OneLine">
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="OutlinedEditText.OneLine">
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="SearchEditText" parent="DefaultEditText">
+        <item name="android:drawableStart">@drawable/ic_magnifier</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="Button" parent="Widget.Material3.Button">
+        <item name="cornerRadius">10dp</item>
+        <item name="android:paddingVertical">14dp</item>
+        <item name="android:textAppearance">@style/Text.ButtonTextStyle</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/blue_enabled</item>
+    </style>
+
+    <style name="StepLabelledWrapper">
+        <item name="label_textColor">@color/dark_gray</item>
+    </style>
+
+    <style name="Button.OnlyText">
+        <item name="android:textAppearance">@style/Text.P2</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:enabled">false</item>
+        <item name="backgroundTint">@color/stroke_gray</item>
+    </style>
+
+    <style name="OutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">10dp</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:paddingVertical">14dp</item>
+        <item name="android:textAppearance">@style/Text.ButtonTextStyle</item>
+        <item name="android:textColor">@color/blue_enabled</item>
+        <item name="strokeColor">@color/blue_enabled</item>
+    </style>
+
+    <style name="TextButton" parent="Text">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">@drawable/background_clickable_text_view</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:paddingVertical">8dp</item>
+        <item name="android:paddingHorizontal">12dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextPicker" parent="Text.P2">
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textColorHint">@color/light_gray_a50</item>
+        <item name="drawableEndCompat">@drawable/ic_dropdown</item>
+        <item name="android:background">@drawable/background_border</item>
+        <item name="android:paddingVertical">14dp</item>
+        <item name="android:paddingHorizontal">16dp</item>
+    </style>
+
+    <style name="OutlinedTextView" parent="Text.P2">
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:background">@drawable/background_border</item>
+        <item name="android:paddingVertical">14dp</item>
+        <item name="android:paddingHorizontal">16dp</item>
+    </style>
+
+    <style name="TextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textAppearance">@style/Text</item>
+    </style>
+
+    <style name="CheckBoxStyle" parent="android:Widget.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/blue</item>
+        <item name="android:buttonTint">@color/blue</item>
+    </style>
+
+    <style name="WorkPermitChip" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="chipMinHeight">20dp</item>
+        <item name="chipStartPadding">6dp</item>
+        <item name="chipEndPadding">6dp</item>
+        <item name="textStartPadding">0dp</item>
+        <item name="textEndPadding">0dp</item>
+        <item name="chipCornerRadius">4dp</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+        <item name="android:textAppearance">@style/Text.P3</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+    <style name="AppToolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="titleTextAppearance">@style/Text.H5</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">10dp</item>
+        <item name="cornerSizeTopLeft">10dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="KeyboardBottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+</resources>

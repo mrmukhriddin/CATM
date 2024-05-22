@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.metasharks.catm.core.ui.view.LabeledWrapper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/StepLabelledWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:label="Организация">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/input_first"
+            style="@style/OutlinedEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            tools:hint="Введите" />
+
+        <EditText
+            android:id="@+id/input_second"
+            style="@style/OutlinedEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            tools:hint="Введите" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/clarification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/Text.P4"
+        tools:text="Отделение, цех, участок, установка, аппарат, здание, сооружение" />
+
+</ru.metasharks.catm.core.ui.view.LabeledWrapper>
