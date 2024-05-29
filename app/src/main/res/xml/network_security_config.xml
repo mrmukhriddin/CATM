@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">catm.msharks.ru</domain>
+        <domain includeSubdomains="true">agama.catm.tech</domain>
+        <trust-anchors>
+            <certificates src="@raw/my_cert" />
+        </trust-anchors>
         <domain includeSubdomains="true">demo.catm.tech</domain>
     </domain-config>
 </network-security-config>
