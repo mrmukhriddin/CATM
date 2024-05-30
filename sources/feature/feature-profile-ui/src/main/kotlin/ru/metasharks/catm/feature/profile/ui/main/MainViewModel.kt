@@ -1,5 +1,6 @@
 package ru.metasharks.catm.feature.profile.ui.main
 
+import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -62,6 +63,7 @@ internal class MainViewModel @Inject constructor(
         }
     }
 
+    @SuppressLint("CheckResult")
     private fun getUserOffline() {
         Singles.zip(
             getCurrentUserUseCase(false)

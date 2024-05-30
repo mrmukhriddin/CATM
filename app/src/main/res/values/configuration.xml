@@ -2,5 +2,6 @@
     <string name="base_url" translatable="false">https://agama.catm.tech/api/v1/</string>
     <string name="demo_url" translatable="false">https://agama.catm.tech/api/v1/</string>
     <string name="media_url" translatable="false">http://catm.msharks.ru</string>
+    <string name="demo_url1" translatable="false">http://85.193.90.107:1337/api/v1/auth/login/</string>
     <string name="base_socket_url" translatable="false">ws://catm.msharks.ru/ws/notifications/</string>
 </resources>

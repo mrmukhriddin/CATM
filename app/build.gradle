@@ -62,6 +62,8 @@ dependencies {
     implementation project(':feature-notifications-ui')
     implementation project(':feature-offline')
     implementation project(':feature-offline-ui')
+    implementation project(':feature-agree-data-ui')
+
 
     implementation Libs.coreKtx
     implementation Libs.cicerone
