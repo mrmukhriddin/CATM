@@ -48,7 +48,7 @@ class AuthTokenStorageImpl @Inject constructor(
     override var firstLogin: Boolean by PreferencesDelegate(
         { preferencesProvider.applicationPreferences },
         PREF_FIRST_LOGIN,
-        false
+        true
     )
 
     override fun setNewAuthToken(authToken: String, expirationDate: String) {

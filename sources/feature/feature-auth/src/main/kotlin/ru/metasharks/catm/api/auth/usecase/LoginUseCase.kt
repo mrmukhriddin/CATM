@@ -26,7 +26,7 @@ internal class LoginUseCaseImpl @Inject constructor(
             }
             .doOnSuccess { loginResponse ->
                 authTokenStorage.setNewAuthToken(loginResponse.token, loginResponse.expiry)
-                authTokenStorage.firstLogin = loginResponse.firstLogin
+                authTokenStorage.firstLogin = loginResponse.first_login
             }.ignoreElement()
     }
 

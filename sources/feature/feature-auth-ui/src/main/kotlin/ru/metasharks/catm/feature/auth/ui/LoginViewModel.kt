@@ -1,6 +1,7 @@
 package ru.metasharks.catm.feature.auth.ui
 
 import android.content.Context
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -19,6 +20,7 @@ import ru.metasharks.catm.core.network.switchurl.BaseUrlSwitcher
 import ru.metasharks.catm.core.storage.prefs.PreferencesDelegate
 import ru.metasharks.catm.core.storage.prefs.PreferencesProvider
 import ru.metasharks.catm.core.ui.ErrorHandler
+import ru.metasharks.catm.core.ui.dialog.pick.PickItemDialog.Companion.TAG
 import ru.metasharks.catm.feature.profile.usecase.GetCurrentUserUseCase
 import ru.metasharks.catm.feature.profile.usecase.license.UpdateLicenseUseCase
 import javax.inject.Inject
@@ -73,6 +75,7 @@ internal class LoginViewModel @Inject constructor(
             .doFinally { _isLoading.value = false }
             .subscribe(
                 {
+
                     if (firstLogin){
                         appRouter.navigateTo(agreeDataScreen())
                     }else{
