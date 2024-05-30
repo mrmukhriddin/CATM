@@ -13,6 +13,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 import ru.metasharks.catm.api.auth.usecase.LoginUseCase
 import ru.metasharks.catm.core.navigation.ApplicationRouter
 import ru.metasharks.catm.core.navigation.screens.AboutAppScreen
+import ru.metasharks.catm.core.navigation.screens.AgreeDataScreen
 import ru.metasharks.catm.core.navigation.screens.CoreScreen
 import ru.metasharks.catm.core.network.switchurl.BaseUrlSwitcher
 import ru.metasharks.catm.core.storage.prefs.PreferencesDelegate
@@ -30,6 +31,7 @@ internal class LoginViewModel @Inject constructor(
     private val appRouter: ApplicationRouter,
     private val coreScreen: CoreScreen,
     private val aboutAppScreen: AboutAppScreen,
+    private val agreeDataScreen: AgreeDataScreen,
     private val baseUrlSwitcher: BaseUrlSwitcher,
     private val preferencesProvider: PreferencesProvider,
     @ApplicationContext context: Context
@@ -38,6 +40,12 @@ internal class LoginViewModel @Inject constructor(
     private var hasUnreadMessages: Boolean by PreferencesDelegate(
         { preferencesProvider.applicationPreferences },
         context.getString(ru.metasharks.catm.core.storage.R.string.preferences_key_has_unread_notifications),
+        false
+    )
+
+    private val firstLogin : Boolean by PreferencesDelegate(
+        {preferencesProvider.applicationPreferences},
+        "pref.first_login",
         false
     )
 
@@ -65,7 +73,12 @@ internal class LoginViewModel @Inject constructor(
             .doFinally { _isLoading.value = false }
             .subscribe(
                 {
-                    appRouter.newRootScreen(coreScreen())
+                    if (firstLogin){
+                        appRouter.navigateTo(agreeDataScreen())
+                    }else{
+                        appRouter.newRootScreen(coreScreen())
+                    }
+
                 },
                 { error ->
                     val errorMessage = ErrorHandler.getDetailMessageFromHttpException(error)

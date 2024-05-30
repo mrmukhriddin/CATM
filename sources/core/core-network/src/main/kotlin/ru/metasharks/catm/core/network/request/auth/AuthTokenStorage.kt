@@ -12,12 +12,15 @@ interface AuthTokenStorage {
 
     fun clear()
 
+    var firstLogin: Boolean
+
     var expirationDate: String?
 
     var authToken: String?
 
     val isValid: Boolean
 }
+
 
 class AuthTokenStorageImpl @Inject constructor(
     private val preferencesProvider: PreferencesProvider
@@ -41,6 +44,13 @@ class AuthTokenStorageImpl @Inject constructor(
             return expirationDate.isAfter(LocalDateTime.now())
         } ?: false
 
+
+    override var firstLogin: Boolean by PreferencesDelegate(
+        { preferencesProvider.applicationPreferences },
+        PREF_FIRST_LOGIN,
+        false
+    )
+
     override fun setNewAuthToken(authToken: String, expirationDate: String) {
         this.authToken = authToken
         this.expirationDate = expirationDate
@@ -52,11 +62,14 @@ class AuthTokenStorageImpl @Inject constructor(
     }
 
     companion object {
-
         private const val PREF_AUTH_TOKEN = "pref.auth_token"
         private const val PREF_EXPIRATION_DATE = "pref.expiration_date"
+        private const val PREF_FIRST_LOGIN = "pref.first_login"
     }
 }
+
+
+
 
 class AuthTokenStorageMock @Inject constructor() : AuthTokenStorage {
 
@@ -67,6 +80,12 @@ class AuthTokenStorageMock @Inject constructor() : AuthTokenStorage {
     override fun clear() {
         TODO("Not yet implemented")
     }
+
+
+
+    override var firstLogin: Boolean
+        get() = TODO("Not yet implemented")
+        set(value) {}
 
     override var expirationDate: String?
         get() = "2100-01-01T00:00:00.000000"

@@ -10,5 +10,7 @@ data class LoginResponse(
     @SerialName("token")
     val token: String,
     @SerialName("user")
-    val user: LoginUser
+    val user: LoginUser,
+    @SerialName("firstLogin")
+    val firstLogin : Boolean = false
 )

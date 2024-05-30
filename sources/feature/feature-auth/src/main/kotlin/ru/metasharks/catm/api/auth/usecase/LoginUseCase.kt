@@ -9,6 +9,8 @@ import javax.inject.Inject
 fun interface LoginUseCase {
 
     operator fun invoke(username: String, password: String): Completable
+
+//    operator fun invoke(first_login : Boolean) : Completable
 }
 
 internal class LoginUseCaseImpl @Inject constructor(
@@ -24,6 +26,7 @@ internal class LoginUseCaseImpl @Inject constructor(
             }
             .doOnSuccess { loginResponse ->
                 authTokenStorage.setNewAuthToken(loginResponse.token, loginResponse.expiry)
+                authTokenStorage.firstLogin = loginResponse.firstLogin
             }.ignoreElement()
     }
 
