@@ -10,7 +10,6 @@ fun interface LoginUseCase {
 
     operator fun invoke(username: String, password: String): Completable
 
-//    operator fun invoke(first_login : Boolean) : Completable
 }
 
 internal class LoginUseCaseImpl @Inject constructor(

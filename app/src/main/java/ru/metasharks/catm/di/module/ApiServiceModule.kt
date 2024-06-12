@@ -1,10 +1,13 @@
 package ru.metasharks.catm.di.module
 
+import android.content.Context
+import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
@@ -102,6 +105,7 @@ internal abstract class ApiServiceModule {
         @Provides
         @Singleton
         fun provideOkHttpClient(
+            @ApplicationContext context: Context,
             loggingInterceptor: LoggingInterceptor,
             cookieInterceptor: CookieInterceptor,
             cookieJar: CookieJar,
@@ -124,6 +128,7 @@ internal abstract class ApiServiceModule {
                     if (BuildConfig.DEBUG) {
                         addInterceptor(loggingInterceptor)
                         addInterceptor(cookieInterceptor)
+                        addInterceptor(ChuckerInterceptor(context))
                     }
                 }
                 .build()

@@ -85,6 +85,7 @@ dependencies {
     implementation Libs.retrofitKotlinSerialization
     implementation Libs.roomRuntime
     implementation Libs.roomRxJava
+    debugImplementation Libs.chucker
 
     implementation platform(Libs.firebase)
     implementation Libs.firebaseAnalytics

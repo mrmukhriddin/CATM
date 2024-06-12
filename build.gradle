@@ -36,8 +36,8 @@ allprojects {
 }
 
 ext {
-    compileSdkVersion = 31
-    targetSdkVersion = 30
+    compileSdkVersion = 33
+    targetSdkVersion = 33
     minSdkVersion = 28
     buildToolsVersion = "30.0.3"
 

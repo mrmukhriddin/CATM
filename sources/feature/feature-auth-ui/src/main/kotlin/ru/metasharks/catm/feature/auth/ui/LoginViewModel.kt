@@ -77,9 +77,9 @@ internal class LoginViewModel @Inject constructor(
                 {
 
                     if (firstLogin){
-                        appRouter.navigateTo(agreeDataScreen())
-                    }else{
                         appRouter.newRootScreen(coreScreen())
+                    }else{
+                        appRouter.navigateTo(agreeDataScreen())
                     }
 
                 },

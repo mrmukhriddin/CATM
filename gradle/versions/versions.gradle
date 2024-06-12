@@ -136,6 +136,7 @@ ext.Libs = [
         okHttp                     : "com.squareup.okhttp3:okhttp:${Versions.okHttp}",
         okHttpUrlconnection        : "com.squareup.okhttp3:okhttp-urlconnection:${Versions.okHttp}",
         okHttpLoggingInterceptor   : "com.squareup.okhttp3:logging-interceptor:${Versions.okHttp}",
+        chucker                    : "com.github.chuckerteam.chucker:library:3.5.2",
 
         jodaTime                   : "joda-time:joda-time:${Versions.jodaTime}",
         jodaTimeNoTzdb             : "joda-time:joda-time:${Versions.jodaTime}:no-tzdb",
