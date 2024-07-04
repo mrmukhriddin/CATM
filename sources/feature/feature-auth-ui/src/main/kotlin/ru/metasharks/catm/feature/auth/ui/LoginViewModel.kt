@@ -16,6 +16,7 @@ import ru.metasharks.catm.core.navigation.ApplicationRouter
 import ru.metasharks.catm.core.navigation.screens.AboutAppScreen
 import ru.metasharks.catm.core.navigation.screens.AgreeDataScreen
 import ru.metasharks.catm.core.navigation.screens.CoreScreen
+import ru.metasharks.catm.core.network.request.auth.AuthTokenStorage
 import ru.metasharks.catm.core.network.switchurl.BaseUrlSwitcher
 import ru.metasharks.catm.core.storage.prefs.PreferencesDelegate
 import ru.metasharks.catm.core.storage.prefs.PreferencesProvider
@@ -45,8 +46,8 @@ internal class LoginViewModel @Inject constructor(
         false
     )
 
-    private val firstLogin : Boolean by PreferencesDelegate(
-        {preferencesProvider.applicationPreferences},
+    private val firstLogin: Boolean by PreferencesDelegate(
+        { preferencesProvider.applicationPreferences },
         "pref.first_login",
         false
     )
@@ -76,10 +77,10 @@ internal class LoginViewModel @Inject constructor(
             .subscribe(
                 {
 
-                    if (firstLogin){
-                        appRouter.newRootScreen(coreScreen())
-                    }else{
+                    if (firstLogin) {
                         appRouter.navigateTo(agreeDataScreen())
+                    } else {
+                        appRouter.newRootScreen(coreScreen())
                     }
 
                 },

@@ -1,25 +1,18 @@
 package ru.metasharks.catm.sources.feature.agree.data.ui;
 
-import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.qualifiers.ApplicationContext
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.kotlin.addTo
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.json.JSONException
-import org.json.JSONObject
-import retrofit2.HttpException
 import ru.metasharks.catm.api.auth.usecase.VerifySuffixUseCase
 import ru.metasharks.catm.core.navigation.ApplicationRouter
 import ru.metasharks.catm.core.navigation.screens.CoreScreen
-import ru.metasharks.catm.core.storage.prefs.PreferencesDelegate
-import ru.metasharks.catm.core.storage.prefs.PreferencesProvider
+import ru.metasharks.catm.core.network.request.auth.AuthTokenStorage
 import ru.metasharks.catm.core.ui.ErrorHandler
-import ru.metasharks.catm.feature.agree.data.ui.R
 import javax.inject.Inject
 
 @HiltViewModel
@@ -27,6 +20,7 @@ class AgreeDataViewModel @Inject constructor(
     private val verifySuffixUseCase: VerifySuffixUseCase,
     private val appRouter: ApplicationRouter,
     private val coreScreen: CoreScreen,
+    private val authTokenStorage: AuthTokenStorage
 ) : ViewModel() {
 
     private val compositeDisposable = CompositeDisposable()
@@ -53,6 +47,10 @@ class AgreeDataViewModel @Inject constructor(
                 {
                     _verificationSuccess.value = true
                     appRouter.newRootScreen(coreScreen())
+                    authTokenStorage.setNewAuthToken(
+                        authTokenStorage.getTemporaryAuthTokenInfo().first!!,
+                        authTokenStorage.getTemporaryAuthTokenInfo().second!!
+                    )
                 },
                 { error ->
                     _verificationSuccess.value = false
