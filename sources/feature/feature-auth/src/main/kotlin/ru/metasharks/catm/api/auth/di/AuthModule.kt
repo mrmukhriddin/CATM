@@ -12,6 +12,8 @@ import ru.metasharks.catm.api.auth.usecase.LoginUseCase
 import ru.metasharks.catm.api.auth.usecase.LoginUseCaseImpl
 import ru.metasharks.catm.api.auth.usecase.LogoutUseCase
 import ru.metasharks.catm.api.auth.usecase.LogoutUseCaseImpl
+import ru.metasharks.catm.api.auth.usecase.VerifySuffixUseCase
+import ru.metasharks.catm.api.auth.usecase.VerifySuffixUseCaseImpl
 import ru.metasharks.catm.core.network.ApiClient
 
 @Module
@@ -26,6 +28,9 @@ internal abstract class AuthModule private constructor() {
 
     @Binds
     abstract fun bindLogoutUseCase(impl: LogoutUseCaseImpl): LogoutUseCase
+
+    @Binds
+    abstract fun bindVerifySuffixUseCase(impl: VerifySuffixUseCaseImpl): VerifySuffixUseCase
 
     companion object {
 

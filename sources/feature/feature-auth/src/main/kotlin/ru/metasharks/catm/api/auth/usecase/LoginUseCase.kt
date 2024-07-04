@@ -10,7 +10,6 @@ fun interface LoginUseCase {
 
     operator fun invoke(username: String, password: String): Completable
 
-//    operator fun invoke(first_login : Boolean) : Completable
 }
 
 internal class LoginUseCaseImpl @Inject constructor(
@@ -25,7 +24,16 @@ internal class LoginUseCaseImpl @Inject constructor(
                 authApi.login(credentialsProvider.getCredentials(username, password))
             }
             .doOnSuccess { loginResponse ->
-                authTokenStorage.setNewAuthToken(loginResponse.token, loginResponse.expiry)
+
+
+                if (!loginResponse.first_login) {
+                    authTokenStorage.setNewAuthToken(loginResponse.token, loginResponse.expiry)
+                } else {
+                    authTokenStorage.setTemporaryAuthToken(
+                        loginResponse.token,
+                        loginResponse.expiry
+                    )
+                }
                 authTokenStorage.firstLogin = loginResponse.first_login
             }.ignoreElement()
     }
